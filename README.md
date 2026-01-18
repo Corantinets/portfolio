@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio - Corantin Louchard
 
-## Getting Started
+Portfolio professionnel présentant mes projets en développement logiciel et cybersécurité.
 
-First, run the development server:
+**Étudiant en Génie des Technologies de l'Information** à l'École de technologie supérieure (ÉTS), Montréal  
+**À la recherche d'un stage pour l'été 2026**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Projet en vedette : SecureVault
+
+Application web de partage sécurisé de secrets avec chiffrement AES-256 côté client et autodestruction après lecture unique.
+
+- **[Démo live](https://secure-vault-client-seven.vercel.app/)** - Essayez l'application
+- **[Code source](https://github.com/Corantinets/secure-vault)** - Voir le code sur GitHub
+
+**Stack technique :** React 18, TypeScript, Node.js, Express, MongoDB, AES-256, Vercel
+
+## 🛠️ Technologies du portfolio
+
+- **Next.js 15** - Framework React
+- **TypeScript** - Typage statique
+- **Tailwind CSS** - Design moderne et responsive
+- **Animations CSS personnalisées** - Expérience utilisateur fluide
+
+## 📂 Structure du projet
+
+```
+portfolio-corantin/
+├── app/
+│   ├── page.tsx        # Page principale
+│   ├── layout.tsx      # Layout global
+│   └── globals.css     # Styles et animations
+├── public/
+│   ├── SecureVault.png # Screenshot du projet
+│   └── cv-corantin.pdf # CV
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Développement local
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Installer les dépendances
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Lancer le serveur de développement
+npm run dev
 
-## Learn More
+# Build de production
+npm run build
 
-To learn more about Next.js, take a look at the following resources:
+# Démarrer le serveur de production
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Ouvrir [http://localhost:3000](http://localhost:3000) pour voir le résultat.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📬 Contact
 
-## Deploy on Vercel
+- **Email :** [corantin.louchard@ens.etsmtl.ca](mailto:corantin.louchard@ens.etsmtl.ca)
+- **LinkedIn :** [Corantin Louchard](https://www.linkedin.com/in/corantin-louchard-03b3142a2)
+- **GitHub :** [@CorantinETS](https://github.com/CorantinETS)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📄 Licence
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© 2026 Corantin Louchard. Tous droits réservés.
