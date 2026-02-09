@@ -341,7 +341,8 @@ export default function Home() {
         </FadeIn>
 
         {/* Projets Personnels */}
-        <div className="mb-12">
+        <FadeIn delay={100}>
+          <div className="mb-12">
           <h4 className="text-xl font-semibold text-purple-400 mb-4">Projets Personnels</h4>
           <div className="grid md:grid-cols-2 gap-6">
             <ProjectCard
@@ -365,9 +366,11 @@ export default function Home() {
             />
           </div>
         </div>
+        </FadeIn>
 
         {/* Projets Académiques */}
-        <div>
+        <FadeIn delay={200}>
+          <div>
           <h4 className="text-xl font-semibold text-teal-400 mb-4">Projets Académiques</h4>
           <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl p-6 hover:border-teal-500/30 hover:bg-slate-200 dark:hover:bg-slate-800/70 transition-all">
@@ -412,14 +415,18 @@ export default function Home() {
           </div>
         </div>
         </div>
+        </FadeIn>
       </section>
 
       {/* SECTION FORMATION */}
       <section id="formation" className="max-w-screen-lg mx-auto px-6 py-16 animate-slide-up scroll-mt-20">
-        <h3 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-8">
-          Formation
-        </h3>
-        <div className="space-y-6">
+        <FadeIn>
+          <h3 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-8">
+            Formation
+          </h3>
+        </FadeIn>
+        <FadeIn delay={100}>
+          <div className="space-y-6">
           <div className="bg-gradient-to-br from-slate-100 to-slate-50 dark:from-slate-800/70 dark:to-slate-800/30 border border-slate-200 dark:border-slate-700 rounded-xl p-8 hover:border-teal-500/30 transition-all">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
               <div>
@@ -448,11 +455,13 @@ export default function Home() {
             </div>
           </div>
         </div>
+        </FadeIn>
       </section>
 
       {/* SECTION CONTACT */}
       <section id="contact" className="max-w-screen-lg mx-auto px-6 py-16 animate-slide-up scroll-mt-20">
-        <div className="bg-gradient-to-br from-teal-100 to-slate-100 dark:from-teal-500/10 dark:to-slate-800/50 border border-teal-300 dark:border-teal-500/30 rounded-xl p-10 text-center hover:border-teal-500/50 transition-all duration-300">
+        <FadeIn>
+          <div className="bg-gradient-to-br from-teal-100 to-slate-100 dark:from-teal-500/10 dark:to-slate-800/50 border border-teal-300 dark:border-teal-500/30 rounded-xl p-10 text-center hover:border-teal-500/50 transition-all duration-300">
           <h3 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-4">
             Me Contacter
           </h3>
@@ -471,6 +480,7 @@ export default function Home() {
             </a>
           </div>
         </div>
+        </FadeIn>
       </section>
 
       {/* FOOTER ENRICHI */}
