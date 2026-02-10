@@ -224,7 +224,7 @@ export default function Home() {
             ]}
             buttons={[
               { text: "Voir le Projet", href: "/guitar-hero", primary: true },
-              { text: "Code Source", href: "https://github.com/Corantinets/portfolio-corantin/tree/main/public/code/guitar-hero", external: true },
+              { text: "Code Source", href: "https://github.com/Corantinets/portfolio/tree/main/public/code/guitar-hero", external: true },
             ]}
           />
         </Carousel>

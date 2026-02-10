@@ -436,7 +436,7 @@ export default function GuitarHeroProject() {
             
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <a 
-                href="https://github.com/Corantinets/portfolio-corantin/blob/main/public/code/guitar-hero/code.py" 
+                href="https://github.com/Corantinets/portfolio/blob/main/public/code/guitar-hero/code.py" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group/card relative"
@@ -467,7 +467,7 @@ export default function GuitarHeroProject() {
               </a>
 
               <a 
-                href="https://github.com/Corantinets/portfolio-corantin/blob/main/public/code/guitar-hero/boot.py" 
+                href="https://github.com/Corantinets/portfolio/blob/main/public/code/guitar-hero/boot.py" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group/card relative"
@@ -498,7 +498,7 @@ export default function GuitarHeroProject() {
               </a>
 
               <a 
-                href="https://github.com/Corantinets/portfolio-corantin/blob/main/public/code/guitar-hero/hid_gamepad.py" 
+                href="https://github.com/Corantinets/portfolio/blob/main/public/code/guitar-hero/hid_gamepad.py" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group/card relative"
