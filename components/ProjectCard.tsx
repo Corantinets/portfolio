@@ -4,11 +4,11 @@ interface ProjectCardProps {
   title: string;
   description: string;
   technologies: string[];
-  accentColor?: 'teal' | 'purple' | 'pink';
+  accentColor?: 'orange' | 'warm' | 'soft';
   link?: string;
   isExternal?: boolean;
   emoji?: string;
-  badge?: string;
+  iconComponent?: React.ReactNode;
   date?: string;
   image?: string;
   features?: { icon: string; text: string }[];
@@ -20,11 +20,11 @@ export default function ProjectCard({
   title,
   description,
   technologies,
-  accentColor = 'teal',
+  accentColor = 'orange',
   link,
   isExternal = false,
   emoji,
-  badge,
+  iconComponent,
   date,
   image,
   features,
@@ -32,41 +32,38 @@ export default function ProjectCard({
   isFeatured = false,
 }: ProjectCardProps) {
   const colorClasses = {
-    teal: {
-      border: 'border-teal-500/30',
-      borderHover: 'hover:border-teal-500/50',
-      gradient: 'from-teal-500/20',
-      gradientHover: 'hover:from-teal-500/30',
-      text: 'text-teal-600 dark:text-teal-400',
-      textHover: 'group-hover:text-teal-500 dark:group-hover:text-teal-300',
-      badge: 'bg-teal-200 dark:bg-teal-500/10 text-teal-800 dark:text-teal-300 border-teal-300 dark:border-teal-500/30',
-      tech: 'bg-teal-200 dark:bg-teal-500/20 text-teal-800 dark:text-teal-300 border-teal-300 dark:border-teal-500/30',
-      button: 'bg-teal-500 hover:bg-teal-400 shadow-teal-500/50',
-      buttonSecondary: 'hover:border-teal-400 hover:text-teal-400',
+    orange: {
+      border: 'border-[#C95E2D]/30 dark:border-[#E68A57]/30',
+      borderHover: 'hover:border-[#C95E2D]/50 dark:hover:border-[#E68A57]/50',
+      gradient: 'from-[#C95E2D]/10 dark:from-[#E68A57]/10',
+      gradientHover: 'hover:from-[#C95E2D]/20 dark:hover:from-[#E68A57]/20',
+      text: 'text-[#C95E2D] dark:text-[#E68A57]',
+      textHover: 'group-hover:text-[#A94A20] dark:group-hover:text-[#F5C895]',
+      tech: 'bg-[#E68A57]/20 dark:bg-[#E68A57]/10 text-[#A94A20] dark:text-[#F5C895] border-[#E68A57]/30',
+      button: 'bg-[#C95E2D] dark:bg-[#E68A57] hover:bg-[#A94A20] dark:hover:bg-[#F5C895] text-[#FFF7F0] dark:text-[#2F1F1A]',
+      buttonSecondary: 'hover:border-[#C95E2D] dark:hover:border-[#E68A57] hover:text-[#C95E2D] dark:hover:text-[#E68A57]',
     },
-    purple: {
-      border: 'border-purple-500/30',
-      borderHover: 'hover:border-purple-500/50',
-      gradient: 'from-purple-500/20',
-      gradientHover: 'hover:from-purple-500/30',
-      text: 'text-purple-600 dark:text-purple-400',
-      textHover: 'group-hover:text-purple-500 dark:group-hover:text-purple-300',
-      badge: 'bg-purple-200 dark:bg-purple-500/10 text-purple-800 dark:text-purple-300 border-purple-300 dark:border-purple-500/30',
-      tech: 'bg-purple-200 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300 border-purple-300 dark:border-purple-500/30',
-      button: 'bg-purple-500 hover:bg-purple-400 shadow-purple-500/50',
-      buttonSecondary: 'hover:border-purple-400 hover:text-purple-400',
+    warm: {
+      border: 'border-[#F3B37A]/30 dark:border-[#F5D4A0]/30',
+      borderHover: 'hover:border-[#F3B37A]/50 dark:hover:border-[#F5D4A0]/50',
+      gradient: 'from-[#F3B37A]/10 dark:from-[#F5D4A0]/10',
+      gradientHover: 'hover:from-[#F3B37A]/20 dark:hover:from-[#F5D4A0]/20',
+      text: 'text-[#C95E2D] dark:text-[#F5D4A0]',
+      textHover: 'group-hover:text-[#A94A20] dark:group-hover:text-[#FFF7F0]',
+      tech: 'bg-[#F3B37A]/20 dark:bg-[#F5D4A0]/10 text-[#A94A20] dark:text-[#FFF7F0] border-[#F3B37A]/30',
+      button: 'bg-[#F3B37A] dark:bg-[#F5D4A0] hover:bg-[#E68A57] dark:hover:bg-[#FFF7F0] text-[#2F221D] dark:text-[#2F1F1A]',
+      buttonSecondary: 'hover:border-[#F3B37A] dark:hover:border-[#F5D4A0] hover:text-[#F3B37A] dark:hover:text-[#F5D4A0]',
     },
-    pink: {
-      border: 'border-pink-500/30',
-      borderHover: 'hover:border-pink-500/50',
-      gradient: 'from-pink-500/20',
-      gradientHover: 'hover:from-pink-500/30',
-      text: 'text-pink-600 dark:text-pink-400',
-      textHover: 'group-hover:text-pink-500 dark:group-hover:text-pink-300',
-      badge: 'bg-pink-200 dark:bg-pink-500/10 text-pink-800 dark:text-pink-300 border-pink-300 dark:border-pink-500/30',
-      tech: 'bg-pink-200 dark:bg-pink-500/20 text-pink-800 dark:text-pink-300 border-pink-300 dark:border-pink-500/30',
-      button: 'bg-pink-500 hover:bg-pink-400 shadow-pink-500/50',
-      buttonSecondary: 'hover:border-pink-400 hover:text-pink-400',
+    soft: {
+      border: 'border-[#E68A57]/30 dark:border-[#F5C895]/30',
+      borderHover: 'hover:border-[#E68A57]/50 dark:hover:border-[#F5C895]/50',
+      gradient: 'from-[#E68A57]/10 dark:from-[#F5C895]/10',
+      gradientHover: 'hover:from-[#E68A57]/20 dark:hover:from-[#F5C895]/20',
+      text: 'text-[#C95E2D] dark:text-[#F5C895]',
+      textHover: 'group-hover:text-[#A94A20] dark:group-hover:text-[#FFF7F0]',
+      tech: 'bg-[#E68A57]/20 dark:bg-[#F5C895]/10 text-[#A94A20] dark:text-[#FFF7F0] border-[#E68A57]/30',
+      button: 'bg-[#E68A57] dark:bg-[#F5C895] hover:bg-[#C95E2D] dark:hover:bg-[#FFF7F0] text-[#FFF7F0] dark:text-[#2F1F1A]',
+      buttonSecondary: 'hover:border-[#E68A57] dark:hover:border-[#F5C895] hover:text-[#E68A57] dark:hover:text-[#F5C895]',
     },
   };
 
@@ -75,14 +72,14 @@ export default function ProjectCard({
   // Carte featured (pour le carrousel)
   if (isFeatured) {
     return (
-      <div className={`bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 border ${colors.border} rounded-xl overflow-hidden shadow-2xl hover:shadow-${accentColor}-500/20 transition-all duration-300`}>
+      <div className={`bg-gradient-to-br from-[#FFF7F0] to-[#F8EADF] dark:from-[#3D2D27] dark:to-[#2F1F1A] border ${colors.border} rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300`}>
         {/* Image */}
         {image && (
           <a 
             href={link || '#'}
             target={isExternal ? "_blank" : undefined}
             rel={isExternal ? "noopener noreferrer" : undefined}
-            className="relative h-64 md:h-80 overflow-hidden bg-slate-950 group block"
+            className="relative h-64 md:h-80 overflow-hidden bg-[#2F221D] group block"
             title={`Cliquez pour voir ${title}`}
           >
             <Image 
@@ -97,35 +94,31 @@ export default function ProjectCard({
         )}
 
         <div className="p-8">
-          {/* Badge et date */}
-          {(badge || date) && (
+          {/* Date */}
+          {(date) && (
             <div className="flex items-center gap-3 mb-4">
-              {badge && (
-                <span className={`px-3 py-1 rounded-full ${colors.badge} text-xs font-bold uppercase tracking-wider`}>
-                  {badge}
-                </span>
-              )}
-              {date && <span className="text-slate-500 text-sm">{date}</span>}
+              {date && <span className="text-[#6E5A50] dark:text-[#D9CCBC] text-sm">{date}</span>}
             </div>
           )}
 
           {/* Titre */}
-          <h4 className={`text-3xl font-bold ${colors.text} mb-4`}>
-            {title} {emoji}
+          <h4 className={`text-3xl font-bold ${colors.text} mb-4 flex items-center gap-2`}>
+            {title} 
+            {iconComponent ? <span className="inline-block">{iconComponent}</span> : emoji && <span>{emoji}</span>}
           </h4>
 
           {/* Description */}
-          <p className="text-slate-900 dark:text-slate-300 text-lg leading-relaxed mb-6">
+          <p className="text-[#2F221D] dark:text-[#D9CCBC] text-lg leading-relaxed mb-6">
             {description}
           </p>
 
           {/* Features */}
           {features && features.length > 0 && (
             <div className="mb-6">
-              <h5 className="text-sm font-semibold text-slate-400 uppercase tracking-wide mb-3">
+              <h5 className="text-sm font-semibold text-[#6E5A50] dark:text-[#D9CCBC] uppercase tracking-wide mb-3">
                 Fonctionnalités Clés
               </h5>
-              <ul className="space-y-2 text-slate-900 dark:text-slate-300">
+              <ul className="space-y-2 text-[#2F221D] dark:text-[#D9CCBC]">
                 {features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-2">
                     <span className={colors.text}>{feature.icon}</span>
@@ -138,7 +131,7 @@ export default function ProjectCard({
 
           {/* Technologies */}
           <div className="mb-6">
-            <h5 className="text-sm font-semibold text-slate-400 uppercase tracking-wide mb-3">
+            <h5 className="text-sm font-semibold text-[#6E5A50] dark:text-[#D9CCBC] uppercase tracking-wide mb-3">
               Stack Technique
             </h5>
             <div className="flex flex-wrap gap-2">
@@ -164,8 +157,8 @@ export default function ProjectCard({
                   rel={button.external ? "noopener noreferrer" : undefined}
                   className={
                     button.primary
-                      ? `px-6 py-3 rounded-lg ${colors.button} text-slate-900 font-bold transition-all shadow-lg hover:shadow-${accentColor}-500/50`
-                      : `px-6 py-3 rounded-lg border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-200 ${colors.buttonSecondary} transition-all`
+                      ? `px-6 py-3 rounded-lg ${colors.button} font-bold transition-all`
+                      : `px-6 py-3 rounded-lg border-2 border-[#E7C7B3] dark:border-[#5A4A40] text-[#2F221D] dark:text-[#D9CCBC] ${colors.buttonSecondary} transition-all`
                   }
                 >
                   {button.text}
@@ -191,13 +184,14 @@ export default function ProjectCard({
   return (
     <Wrapper
       {...wrapperProps}
-      className={`bg-gradient-to-br ${colors.gradient} to-slate-100/50 dark:to-slate-800/50 border ${colors.border} rounded-xl p-6 ${
+      className={`bg-gradient-to-br ${colors.gradient} to-[#F8EADF]/50 dark:to-[#3D2D27]/50 border ${colors.border} rounded-xl p-6 ${
         link ? `${colors.borderHover} ${colors.gradientHover} transition-all group cursor-pointer` : ''
       }`}
     >
       <div className="flex items-center justify-between mb-4">
-        <h5 className={`text-xl font-bold text-slate-900 dark:text-slate-100 ${link ? colors.textHover : ''} transition-colors`}>
-          {title} {emoji}
+        <h5 className={`text-xl font-bold text-[#2F221D] dark:text-[#FFF7F0] ${link ? colors.textHover : ''} transition-colors flex items-center gap-2`}>
+          {title} 
+          {iconComponent ? <span className="inline-block">{iconComponent}</span> : emoji && <span>{emoji}</span>}
         </h5>
         {link && (
           <svg
@@ -210,7 +204,7 @@ export default function ProjectCard({
           </svg>
         )}
       </div>
-      <p className="text-slate-900 dark:text-slate-300 mb-4 leading-relaxed">{description}</p>
+      <p className="text-[#2F221D] dark:text-[#D9CCBC] mb-4 leading-relaxed">{description}</p>
       <div className="flex flex-wrap gap-2">
         {technologies.map((tech, index) => (
           <span

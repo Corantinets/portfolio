@@ -5,13 +5,13 @@ import FadeIn from "@/components/FadeIn";
 
 export default function GuitarHeroProject() {
   return (
-    <main className="min-h-screen bg-slate-900 text-slate-100 font-sans selection:bg-teal-300 selection:text-slate-900">
+    <main className="min-h-screen bg-[#FFF7F0] dark:bg-[#2F1F1A] text-[#2F221D] dark:text-[#FFF7F0] font-sans selection:bg-[#F3B37A] selection:text-[#2F221D]">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-xl border-b border-slate-700/50 shadow-xl">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#FFF7F0]/95 dark:bg-[#2F1F1A]/95 backdrop-blur-xl border-b border-[#E7C7B3] dark:border-[#5A4A40]/50 shadow-xl">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <Link 
             href="/" 
-            className="inline-flex items-center gap-2 text-teal-400 hover:text-teal-300 transition-all duration-300 font-medium hover:gap-3"
+            className="inline-flex items-center gap-2 text-[#C95E2D] dark:text-[#E68A57] hover:text-[#A94A20] dark:hover:text-[#F5C895] transition-all duration-300 font-medium hover:gap-3"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -25,23 +25,23 @@ export default function GuitarHeroProject() {
       <FadeIn>
       <section className="relative max-w-7xl mx-auto px-6 pt-32 pb-20">
         <div className="mb-6">
-          <span className="px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-purple-300 text-sm font-bold uppercase tracking-wider border border-purple-500/30">
+          <span className="px-4 py-2 rounded-full bg-gradient-to-r from-[#E68A57]/20 to-[#F3B37A]/20 text-[#C95E2D] dark:text-[#F5C895] text-sm font-bold uppercase tracking-wider border border-[#E68A57]/30 dark:border-[#F5C895]/30">
             Projet Personnel
           </span>
         </div>
         
-        <h1 className="text-6xl font-bold text-slate-100 mb-6 bg-gradient-to-r from-slate-100 to-slate-300 bg-clip-text">
+        <h1 className="text-6xl font-bold text-[#2F221D] dark:text-[#FFF7F0] mb-6 bg-gradient-to-r from-[#2F221D] dark:from-[#FFF7F0] to-[#6E5A50] dark:to-[#D9CCBC] bg-clip-text">
           Contrôleur Guitar Hero USB Custom
         </h1>
         
-        <p className="text-xl text-slate-300 leading-relaxed mb-6">
+        <p className="text-xl text-[#2F221D] dark:text-[#D9CCBC] leading-relaxed mb-6">
           Développement d&apos;un contrôleur de jeu USB personnalisé pour Clone Hero utilisant 
           un Raspberry Pi Pico. Driver USB HID Gamepad en CircuitPython avec latence ultra-faible.
         </p>
 
         <div className="flex flex-wrap gap-6">
-          <div className="flex items-center gap-2 text-slate-400 bg-slate-800/50 px-4 py-2 rounded-lg border border-slate-700/50">
-            <svg className="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="flex items-center gap-2 text-[#6E5A50] dark:text-[#D9CCBC] bg-[#F8EADF] dark:bg-[#3D2D27]/50 px-4 py-2 rounded-lg border border-[#E7C7B3] dark:border-[#5A4A40]/50">
+            <svg className="w-5 h-5 text-[#C95E2D] dark:text-[#E68A57]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
             <span className="font-medium">2026</span>
@@ -54,8 +54,8 @@ export default function GuitarHeroProject() {
       <FadeIn delay={100}>
       <section className="max-w-7xl mx-auto px-2 mb-20">
         <div className="relative group">
-          <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-600 to-teal-600 rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
-          <div className="relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-700/50 shadow-2xl h-[700px]">
+          <div className="absolute -inset-1 bg-gradient-to-r from-[#E68A57] via-[#F3B37A] to-[#C95E2D] rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-1000"></div>
+          <div className="relative rounded-2xl overflow-hidden bg-[#2F1F1A] dark:bg-[#1A130D] border border-[#E7C7B3] dark:border-[#5A4A40]/50 shadow-2xl h-[700px]">
             {/* Image - occupe tout l'espace disponible avec un petit padding */}
             <div className="h-full w-full flex items-center justify-center p-1 relative">
               <Image 
@@ -66,26 +66,26 @@ export default function GuitarHeroProject() {
                 className="max-w-[95%] max-h-full object-contain drop-shadow-2xl rounded-lg"
                 priority={true}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-slate-900/30 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#2F1F1A]/60 via-transparent to-[#2F1F1A]/30 pointer-events-none"></div>
             </div>
             
             {/* Info bar ultra-compacte - semi-transparente */}
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900/90 to-transparent py-1.5 px-4 z-10 mb-4">
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#2F1F1A]/90 to-transparent py-1.5 px-4 z-10 mb-4">
               <div className="text-center">
-                <h3 className="text-base font-bold text-slate-100 mb-1">
+                <h3 className="text-base font-bold text-[#FFF7F0] mb-1">
                   Contrôleur USB Professionnel
                 </h3>
-                <div className="flex items-center justify-center gap-3 text-slate-300 text-[12px]">
+                <div className="flex items-center justify-center gap-3 text-[#D9CCBC] text-[12px]">
                   <div className="flex items-center gap-1">
-                    <div className="w-1 h-1 rounded-full bg-teal-500"></div>
+                    <div className="w-1 h-1 rounded-full bg-[#C95E2D]"></div>
                     <span>Latence &lt;2ms</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <div className="w-1 h-1 rounded-full bg-purple-500"></div>
+                    <div className="w-1 h-1 rounded-full bg-[#E68A57]"></div>
                     <span>Polling 1000Hz</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <div className="w-1 h-1 rounded-full bg-pink-500"></div>
+                    <div className="w-1 h-1 rounded-full bg-[#F3B37A]"></div>
                     <span>Compatible Clone Hero</span>
                   </div>
                 </div>
@@ -95,9 +95,9 @@ export default function GuitarHeroProject() {
         </div>
         
         {/* Crédit modèle 3D */}
-        <div className="mt-6 p-4 rounded-lg bg-slate-800/50 border border-slate-700/50 max-w-4xl mx-auto">
-          <p className="text-slate-300 text-sm text-center">
-            <span className="text-purple-400 font-semibold">Modèle 3D et inspiration :</span>{' '}
+        <div className="mt-6 p-4 rounded-lg bg-[#F8EADF] dark:bg-[#3D2D27]/50 border border-[#E7C7B3] dark:border-[#5A4A40]/50 max-w-4xl mx-auto">
+          <p className="text-[#2F221D] dark:text-[#D9CCBC] text-sm text-center">
+            <span className="text-[#C95E2D] dark:text-[#E68A57] font-semibold">Modèle 3D et inspiration :</span>{' '}
             <a 
               href="https://www.printables.com/model/227781-poly-clone-hero-controller" 
               target="_blank" 
